@@ -1,0 +1,20 @@
+{
+    "name": "lunaris/mailer",
+    "description": "This is a mailer package for Lunaris framework.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lunaris\\Mailer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bhaswanth Chiruthanuru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}
