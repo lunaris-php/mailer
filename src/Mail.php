@@ -22,13 +22,13 @@
             $config = $root . '/app/Config/app.php';
 
             $this->mailer->isSMTP();
-            $this->mailer->Host = $config['server'];
+            $this->mailer->Host = $config['mail_server'];
             $this->mailer->SMTPAuth = true;
-            $this->mailer->Username = $config['username'];
-            $this->mailer->Password = $config['password'];
+            $this->mailer->Username = $config['mail_username'];
+            $this->mailer->Password = $config['mail_password'];
             $this->mailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $this->mailer->Port = $config['port'];
-            $this->mailer->setFrom($config['from_mail'], $config['from_name']);
+            $this->mailer->Port = $config['mail_port'];
+            $this->mailer->setFrom($config['mail_from_address'], $config['mail_from_name']);
         }
 
         protected function receiver(string $email, string $name = '') {
