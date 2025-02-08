@@ -4,6 +4,7 @@
 
     use Lunaris\Mailer\Mail;
     use Exception;
+use Luanris\Mailer\Exceptions\MailNotSentException;
 
     class Mailer {
         private $mailInstance;
@@ -33,7 +34,7 @@
                 $this->mailInstance->send();
                 return;
             } catch (Exception $e) {
-                throw new Exception($e->getMessage());
+                throw new MailNotSentException($e->getMessage());
             }
         }
     }

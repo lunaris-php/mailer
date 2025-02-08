@@ -8,7 +8,7 @@
     use Exception;
     use Lunaris\Mailer\Utils\Funcs;
 
-    class Mail {
+    abstract class Mail {
         protected $mailer;
 
         public function __construct() {
@@ -53,4 +53,6 @@
                 throw new Exception("Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}");
             }
         }
+
+        abstract public function handle(array $args): void;
     }
