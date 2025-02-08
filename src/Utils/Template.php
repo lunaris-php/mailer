@@ -31,7 +31,7 @@
                 
                 class {$mailName} extends Mail implements MailInterface
                 {
-                    public function handle(array \$args) {
+                    public function handle(array \$args): void {
                         // Write your mail content here
                     }
                 }
