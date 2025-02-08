@@ -21,6 +21,8 @@
             $root = dirname(getcwd());
             $config = $root . '/app/Config/app.php';
 
+            echo $config . PHP_EOL;
+
             $this->mailer->isSMTP();
             $this->mailer->Host = $config['mail_server'];
             $this->mailer->SMTPAuth = true;
