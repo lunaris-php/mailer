@@ -19,7 +19,7 @@
 
         private function config() {
             $root = dirname(getcwd());
-            $config = $root . '/app/config/app.php';
+            $config = require $root . '/app/config/app.php';
 
             echo $config . PHP_EOL;
 
